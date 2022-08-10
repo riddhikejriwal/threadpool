@@ -1,0 +1,12 @@
+A framework having a bunch of components that are used for managing worker threads efficiently is referred to as Executor Framework. The Executor API reduces the execution of the task from the actual task to be executed through the Executors. The executor framework is an implementation of the Producer-Consumer pattern. The java.util.concurrent.Executors class provides a set of methods for creating ThreadPools of worker threads.
+
+In order to use the executor framework, we have to create a thread pool for executing the task by submitting that task to that thread pool.
+
+the reason for creating such thread pools are as follows:
+
+•We need to create a large number of threads for adding a new thread without any throttling for each and every process. Due to which it requires more memory and cause wastage of resource. When each thread is swapped, the CPU starts to spend too much time.
+•When we create a new thread for executing a new task cause overhead of thread creation. In order to manage this thread life-cycle, the execution time increase respectively.
+
+There are multiple types of executors used, but the most commonly used is fixedThreadPool(number_of_threads).
+
+We have to import libraries java.util.concurrent.Executors for the same.
